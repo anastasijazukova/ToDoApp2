@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct ToDoItem {
-    var date:Date
-    var text:String
-    var status:Bool
+    var dateDue:Date
+    var toDo:String
+    var isDone:Bool
 }

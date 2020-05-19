@@ -11,7 +11,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" semanticContentAttribute="spatial" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -20,13 +20,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="122" id="5qb-As-kel">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="roe-cR-pRp" rowHeight="122" style="IBUITableViewCellStyleDefault" id="5qb-As-kel">
                                         <rect key="frame" x="0.0" y="28" width="414" height="122"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5qb-As-kel" id="XD3-dI-1ze">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="122"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="roe-cR-pRp">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="122"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <gestureRecognizers/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -39,14 +49,23 @@
                                 <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="plus.circle.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="vPt-XL-S63" kind="popoverPresentation" popoverAnchorView="k7O-JO-J3b" id="gRx-66-0wy">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
+                                    <segue destination="vPt-XL-S63" kind="custom" id="0sS-Jd-4YV"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HG-tS-jpu">
+                                <rect key="frame" x="20" y="20.5" width="80" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="KMh-yA-gu3"/>
+                                    <constraint firstAttribute="width" constant="80" id="eKw-eY-xLQ"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="calendar.circle.fill" catalog="system"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="8HG-tS-jpu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6Nc-Fu-WPU"/>
+                            <constraint firstItem="8HG-tS-jpu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="axe-Do-zrT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k7O-JO-J3b" secondAttribute="trailing" constant="20" id="hjj-zA-bfZ"/>
                             <constraint firstItem="k7O-JO-J3b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="m5r-5h-oZ1"/>
                         </constraints>
@@ -58,16 +77,16 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
         </scene>
-        <!--Input View Controller-->
+        <!--View Controller-->
         <scene sceneID="T0a-yW-L0v">
             <objects>
-                <viewController id="vPt-XL-S63" customClass="UIInputViewController" sceneMemberID="viewController">
+                <viewController id="vPt-XL-S63" customClass="ViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="97M-EB-1FD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiu-Vh-Gay">
-                                <rect key="frame" x="314" y="20.5" width="80" height="79"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiu-Vh-Gay" userLabel="OkButton">
+                                <rect key="frame" x="314" y="64.5" width="80" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="FJu-2R-aSO"/>
                                     <constraint firstAttribute="width" constant="80" id="oGT-nY-uqb"/>
@@ -75,11 +94,13 @@
                                 <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="checkmark.circle.fill" catalog="system"/>
                                 <connections>
+                                    <action selector="confirm:" destination="vPt-XL-S63" eventType="touchUpInside" id="2gL-Q8-l27"/>
+                                    <action selector="done:" destination="vPt-XL-S63" eventType="primaryActionTriggered" id="OHY-Aj-dmK"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="Ctl-KB-fWA"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5O3-DM-K1Z">
-                                <rect key="frame" x="20" y="150" width="374" height="656"/>
+                                <rect key="frame" x="20" y="194" width="374" height="666"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="zPO-eP-SYQ">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
@@ -88,19 +109,22 @@
                                         </constraints>
                                     </datePicker>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="To do's text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5BR-ed-63g">
-                                        <rect key="frame" x="0.0" y="100" width="374" height="556"/>
+                                        <rect key="frame" x="0.0" y="100" width="374" height="566"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="vPt-XL-S63" id="VQZ-If-aU5"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="zPO-eP-SYQ" firstAttribute="centerX" secondItem="5O3-DM-K1Z" secondAttribute="centerX" id="Xv6-Ds-1x7"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7d-G0-IGC">
-                                <rect key="frame" x="20" y="20.5" width="80" height="79"/>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7d-G0-IGC" userLabel="CancelButton">
+                                <rect key="frame" x="20" y="64.5" width="80" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="sZi-fo-Xdt"/>
                                     <constraint firstAttribute="width" constant="80" id="yLA-Ty-RiB"/>
@@ -108,6 +132,7 @@
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" backgroundImage="xmark.circle.fill" catalog="system"/>
                                 <connections>
+                                    <action selector="cancel:" destination="vPt-XL-S63" eventType="touchUpInside" id="kIg-tz-jmj"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="QMV-Jv-mDG"/>
                                 </connections>
                             </button>
@@ -124,7 +149,16 @@
                             <constraint firstItem="5O3-DM-K1Z" firstAttribute="top" secondItem="Pm3-AU-vzy" secondAttribute="top" constant="150" id="r02-Lc-obf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pm3-AU-vzy"/>
+                        <connections>
+                            <outlet property="text" destination="5BR-ed-63g" id="EK3-Is-bqi"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="XI3-sP-g5w"/>
+                    <connections>
+                        <outlet property="Confirm" destination="fiu-Vh-Gay" id="Gcp-76-oAf"/>
+                        <outlet property="date" destination="zPO-eP-SYQ" id="7mK-KZ-KGJ"/>
+                        <outletCollection property="text" destination="5BR-ed-63g" collectionClass="NSMutableArray" id="Pqo-NV-x3d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CyV-9m-JE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,9 +166,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QMV-Jv-mDG"/>
+        <segue reference="Ctl-KB-fWA"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="calendar.circle.fill" catalog="system" width="128" height="121"/>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>

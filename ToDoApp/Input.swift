@@ -7,9 +7,12 @@
 //
 
 import Foundation
-class InputViewController {
+import UIKit
+class InputViewController: UIViewController {
     
     
+    }
     
-}
+
+
  
