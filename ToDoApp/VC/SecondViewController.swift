@@ -23,7 +23,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         
-// MARK: Add keyboard by using appropriate method instead of this:
+        // MARK: Add keyboard by using appropriate method instead of this:
         /*NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(with:)), name: .UIKeyboardWillShow, object: nil)
          and this:
          [[NotificationCenter.default] addObserver:self
@@ -45,6 +45,7 @@ class SecondViewController: UIViewController {
         textInput.resignFirstResponder()
     }
     @IBAction func done(_ sender: UIButton) {
+        dismiss(animated: true)
     }
     
     //
@@ -55,13 +56,13 @@ class SecondViewController: UIViewController {
 
 // MARK: Done button extension (for use with initially hidden "done" button)
 /* extension SecondViewController: UITextViewDelegate {
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if doneButton.isHidden {
-            doneButton.isHidden = false
-        }
-    }
-}
-*/
+ func textViewDidBeginEditing(_ textView: UITextView) {
+ if doneButton.isHidden {
+ doneButton.isHidden = false
+ }
+ }
+ }
+ */
 /*
  // MARK: - Navigation
  

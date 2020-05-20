@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="221" width="414" height="641"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="104" id="yRf-rl-mZ0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="104" id="yRf-rl-mZ0">
                                         <rect key="frame" x="0.0" y="28" width="414" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yRf-rl-mZ0" id="7hK-iF-o3E">
@@ -103,7 +103,7 @@
                                         <rect key="frame" x="0.0" y="398" width="372" height="60"/>
                                         <subviews>
                                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtW-Gd-o9e">
-                                                <rect key="frame" x="0.0" y="0.0" width="372" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="p1Z-7j-Tfa"/>
                                                     <constraint firstAttribute="height" constant="60" id="uTu-Wq-F0l"/>
@@ -113,11 +113,11 @@
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="cencel:" destination="ovr-qF-732" eventType="touchUpInside" id="Eiw-cM-V88"/>
+                                                    <action selector="cancel:" destination="ovr-qF-732" eventType="touchUpInside" id="bgZ-mo-aAB"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54O-fg-Pzh">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54O-fg-Pzh">
+                                                <rect key="frame" x="222" y="0.0" width="150" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="d9F-Mu-nxQ"/>
                                                     <constraint firstAttribute="width" constant="150" id="yZl-f4-6wK"/>
