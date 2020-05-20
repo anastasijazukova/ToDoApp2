@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MainUI View Controller-->
+        <!--View Controller-->
         <scene sceneID="VUF-Xx-kc9">
             <objects>
-                <viewController id="4gX-0T-VO5" customClass="MainUIViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4gX-0T-VO5" customClass="ViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GJ1-hm-y7r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO DO TODAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="voJ-dd-BX9">
                                         <rect key="frame" x="0.0" y="0.0" width="268" height="75"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="tNU-MX-Fjp"/>
+                                            <constraint firstAttribute="width" constant="150" id="tNU-MX-Fjp"/>
                                             <constraint firstAttribute="height" constant="75" id="uSp-qM-sEz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="25"/>
@@ -52,7 +52,7 @@
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" backgroundImage="plus.app" catalog="system"/>
                                         <connections>
-                                            <segue destination="ovr-qF-732" kind="presentation" identifier="AddToDo" id="Mgr-Ct-Yab"/>
+                                            <segue destination="ovr-qF-732" kind="presentation" id="Of5-8D-urk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -75,56 +75,80 @@
             </objects>
             <point key="canvasLocation" x="868.11594202898561" y="-43.526785714285715"/>
         </scene>
-        <!--Add To Do View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="CdJ-wC-BoE">
             <objects>
-                <viewController id="ovr-qF-732" customClass="AddToDoViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ovr-qF-732" customClass="SecondViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cCg-ue-hQ3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="GREAT THINGS TO DO..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KNz-8d-UCn">
-                                <rect key="frame" x="20" y="319" width="374" height="228"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q5k-VK-c6l">
-                                <rect key="frame" x="20" y="186" width="374" height="125"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54O-fg-Pzh">
-                                <rect key="frame" x="243" y="554" width="151" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="DONE ">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="done:" destination="ovr-qF-732" eventType="touchUpInside" id="5bT-p6-Mrb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtW-Gd-o9e">
-                                <rect key="frame" x="20" y="553" width="151" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="CANCEL">
-                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancel:" destination="ovr-qF-732" eventType="touchUpInside" id="hvS-3H-e2z"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="CKy-W4-ygV">
+                                <rect key="frame" x="0.0" y="20" width="372" height="458"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Q5k-VK-c6l">
+                                        <rect key="frame" x="0.0" y="0.0" width="372" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="di8-rS-xXO"/>
+                                        </constraints>
+                                    </datePicker>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KNz-8d-UCn">
+                                        <rect key="frame" x="0.0" y="132" width="372" height="259"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="72" translatesAutoresizingMaskIntoConstraints="NO" id="76p-81-Vn3">
+                                        <rect key="frame" x="0.0" y="398" width="372" height="60"/>
+                                        <subviews>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtW-Gd-o9e">
+                                                <rect key="frame" x="0.0" y="0.0" width="372" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="p1Z-7j-Tfa"/>
+                                                    <constraint firstAttribute="height" constant="60" id="uTu-Wq-F0l"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <state key="normal" title="CANCEL">
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cencel:" destination="ovr-qF-732" eventType="touchUpInside" id="Eiw-cM-V88"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54O-fg-Pzh">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="d9F-Mu-nxQ"/>
+                                                    <constraint firstAttribute="width" constant="150" id="yZl-f4-6wK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <state key="normal" title="DONE ">
+                                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="done:" destination="ovr-qF-732" eventType="touchUpInside" id="d5d-3h-KSp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CKy-W4-ygV" firstAttribute="leading" secondItem="Xcg-to-quV" secondAttribute="leading" id="JR2-J4-Wri"/>
+                            <constraint firstItem="CKy-W4-ygV" firstAttribute="top" secondItem="Xcg-to-quV" secondAttribute="top" constant="20" id="Ths-vT-EO4"/>
+                            <constraint firstItem="Xcg-to-quV" firstAttribute="bottom" secondItem="CKy-W4-ygV" secondAttribute="bottom" constant="330" id="pRc-GM-Bkn"/>
+                            <constraint firstItem="Xcg-to-quV" firstAttribute="trailing" secondItem="CKy-W4-ygV" secondAttribute="trailing" id="vce-4L-Xt4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xcg-to-quV"/>
                     </view>
                     <connections>
-                        <outlet property="dateEdit" destination="Q5k-VK-c6l" id="EDH-0m-iFs"/>
-                        <outlet property="doneButton" destination="54O-fg-Pzh" id="Zfl-Mv-3wF"/>
-                        <outlet property="textView" destination="KNz-8d-UCn" id="fxh-cf-uPV"/>
+                        <outlet property="bottomConstraint" destination="pRc-GM-Bkn" id="Ha8-0x-dBN"/>
+                        <outlet property="dateInput" destination="Q5k-VK-c6l" id="Jr9-I0-ctX"/>
+                        <outlet property="doneButton" destination="54O-fg-Pzh" id="4BF-HJ-sKc"/>
+                        <outlet property="textInput" destination="KNz-8d-UCn" id="dlb-8H-1Vi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKy-N6-rqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
