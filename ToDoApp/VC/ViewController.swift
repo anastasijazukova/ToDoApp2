@@ -25,8 +25,13 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
     func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath)
+        cell.textLabel!.text = "Titletext"
+        
     return cell
     }
 }
