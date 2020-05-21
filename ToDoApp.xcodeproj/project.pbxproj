@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA184AB82473DF6500670EF2 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA184AB72473DF6500670EF2 /* ToDoItem.swift */; };
 		DA770E4F2475588900C4E3BC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA770E4E2475588900C4E3BC /* SecondViewController.swift */; };
-		DA770E5324755CE200C4E3BC /* ToDoTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA770E5224755CE200C4E3BC /* ToDoTableView.swift */; };
 		DA770E5524755DAA00C4E3BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA770E5424755DAA00C4E3BC /* ViewController.swift */; };
 		DA91923C2473C566009AAFC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91923B2473C566009AAFC3 /* AppDelegate.swift */; };
 		DA91923E2473C566009AAFC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA91923D2473C566009AAFC3 /* SceneDelegate.swift */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		DA184AB72473DF6500670EF2 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		DA770E4E2475588900C4E3BC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		DA770E5224755CE200C4E3BC /* ToDoTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableView.swift; sourceTree = "<group>"; };
 		DA770E5424755DAA00C4E3BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DA9192382473C566009AAFC3 /* ToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA91923B2473C566009AAFC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				DA770E5424755DAA00C4E3BC /* ViewController.swift */,
-				DA770E5224755CE200C4E3BC /* ToDoTableView.swift */,
 				DA770E4E2475588900C4E3BC /* SecondViewController.swift */,
 			);
 			path = VC;
@@ -280,7 +277,6 @@
 				DA91923C2473C566009AAFC3 /* AppDelegate.swift in Sources */,
 				DA91923E2473C566009AAFC3 /* SceneDelegate.swift in Sources */,
 				DA770E5524755DAA00C4E3BC /* ViewController.swift in Sources */,
-				DA770E5324755CE200C4E3BC /* ToDoTableView.swift in Sources */,
 				DA770E4F2475588900C4E3BC /* SecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
