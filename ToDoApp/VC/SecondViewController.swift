@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class SecondViewController: UIViewController {
+    
+    // MARK: Properties
+    
+    var managedContext: NSManagedObjectContext!
     
     // MARK: Outlets
     
@@ -22,17 +27,17 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Optional: configure response to keyboard appearance
         
-        // MARK: Add keyboard by using appropriate method instead of this:
         /*NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(with:)), name: .UIKeyboardWillShow, object: nil)
          and this:
          [[NotificationCenter.default] addObserver:self
          selector:@selector(keyboardWillBeHidden:)
          name:UIKeyboardWillHideNotification object:nil];
          */
-        
-        textInput.becomeFirstResponder()
     }
+    
+    // MARK: Actions
     @objc func keyboardWillShow(with notification:Notification) {
         guard let keyboardFrame = notification.userInfo?[""] as? NSValue else { return }
         let keyboardHeight = keyboardFrame.cgRectValue.height
@@ -44,8 +49,26 @@ class SecondViewController: UIViewController {
         dismiss(animated: true)
         textInput.resignFirstResponder()
     }
+    
     @IBAction func done(_ sender: UIButton) {
-        dismiss(animated: true)
+        // Do not allow user to save empty ToDo
+        guard let title = textInput.text, !title.isEmpty else {
+            return
+        }
+        // Review date input saving
+        let todo = ToDo(context:managedContext)
+        todo.titleDo = title
+        todo.dateDue = dateInput.date
+        todo.isDone = false
+        do {
+            try managedContext.save()
+            dismiss(animated: true)
+            textInput.resignFirstResponder()
+        } catch {
+            print ("Error saving ToDo")
+        }
+        
+        
     }
     
     //
